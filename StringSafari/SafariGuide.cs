@@ -82,8 +82,19 @@ namespace StringSafari
         /// <returns>true if the string has at least two lions in it, false otherwise</returns>
         public static bool HasAPride(string str)
         {
-            // TODO
-            return false;
+            int firstLion = str.ToLower().IndexOf("lion");
+            int lastLion = str.IndexOf("Lion");
+
+            if (firstLion == lastLion)
+            {
+                ///only one lion
+                return false;
+            }
+            else
+            {
+                ///at least two lion
+                return true;
+            }
         }
 
         /// <summary>

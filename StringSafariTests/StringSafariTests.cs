@@ -62,6 +62,8 @@ namespace StringSafari.Test
             return SafariGuide.HasAPride(str);
         }
 
+        
+
         [TestCase("zebra", ExpectedResult = false)]
         [TestCase("Lion", ExpectedResult = false)]
         [TestCase("LION ZEBRA zebra lion", ExpectedResult = false)]
