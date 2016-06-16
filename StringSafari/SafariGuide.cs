@@ -47,8 +47,7 @@ namespace StringSafari
         /// <returns>true if the string has a zebra in it, false otherwise</returns>
         public static bool HasZebra(string str)
         {
-            string newString = str.ToLower();
-            return HasBabyZebra(newString);
+            return HasBabyZebra(str.ToLower());
         }
 
         /// <summary>
@@ -59,8 +58,19 @@ namespace StringSafari
         /// <returns>true if the string has at least two zebras in it, false otherwise</returns>
         public static bool HasADazzle(string str)
         {
-            // TODO
-            return false;
+            int firstZebra = str.ToLower().IndexOf("zebra");
+            int lastZebra = str.IndexOf("zebra");
+
+            if (firstZebra == lastZebra)
+            {
+                ///only one zebra
+                return false;
+            }
+            else
+            {
+                ///at least two zebras
+                return true;
+            }
         }
 
         /// <summary>
